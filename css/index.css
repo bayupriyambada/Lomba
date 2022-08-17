@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Balinese&display=swap');
+
+/* rooot */
+
+:root {
+
+  /* font size */
+  --main-h1: 30px;
+  --main-h2: 26px;
+  --main-h3: 20px;
+  --main-p: 18px;
+  --main-span: 15px;
+
+  /* color */
+  --main-color-white: white;
+  --main-color-black: black;
+  --main-color-red: rgb(179, 0, 0);
+  --main-color-brown: #964B00;
+  --main-color-1: #393939;
+  --main-color-2: hsl(197, 6%, 47%);
+  --main-color-3: #9ba8ae;
+  --main-color-4: #bccad0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(59deg,var(--main-color-red), var(--main-color-white));
+  background-repeat: no-repeat;
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  height: 100vh;
+}
+
+.lomba_card{
+  background: var(--main-color-white);
+  padding: 10px;
+  overflow: hidden;
+  width: 800px;
+  /* height:auto; */
+  overflow: auto;
+  /* overflow-y: over; */
+  border-radius: 10px;
+}
+.text_typing {
+  font-size: var(--main-h3);
+  word-break: break-all;
+  z-index: 1000;
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+  background:
+    linear-gradient(-90deg,#000 5px,#0000 0) 10px 0,
+    linear-gradient(#000 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+    b .7s infinite steps(1),   
+    t calc(var(--n)*.3s) steps(var(--n));
+}
+
+.clip {
+  color:#0000;
+  -webkit-background-clip:text;
+  background-clip:text;
+}
+@keyframes t{
+  from {background-size:0 200%; opacity: 1;}
+}
+@keyframes b{
+  50% {background-position:0 -100%,0 0; opacity: 0;}
+}
+
+
+
+/* header */
+.horizontal__center {
+  padding: 20px;
+  z-index: inherit;
+  flex-direction: column;
+  /* columns: 1; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.horizontal__span {
+  color: var(--main-color-black);
+  font-weight: bold;
+}
+
+
+/* animation background */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
